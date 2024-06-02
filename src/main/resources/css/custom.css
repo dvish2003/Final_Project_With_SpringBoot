@@ -1,0 +1,11 @@
+/* Define the normal style for the button */
+.button-normal {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+/* Define the hovered style for the button */
+.button-hovered {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="KD_Aircon_BookingReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="be55bb2a-e559-4c0f-9b77-1c39e98b6e91">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT 
+    Booking.Booking_id,
+    Employee.Employee_Name,
+    Customer.Customer_Name,
+    Location.Location_Address,
+    Payment.Payment_Amount,
+    Booking.Booking_Date
+FROM
+    Booking
+JOIN
+    Employee ON Booking.Employee_id = Employee.Employee_id
+JOIN
+    Location ON Booking.Location_id = Location.Location_id
+JOIN
+    Payment ON Booking.Payment_id = Payment.Payment_id
+JOIN
+    Customer ON Location.Customer_id = Customer.Customer_id;]]>
+	</queryString>
+	<field name="Booking_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Booking_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Booking_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Booking"/>
+	</field>
+	<field name="Employee_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Employee_Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Employee_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Employee"/>
+	</field>
+	<field name="Customer_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Customer_Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Customer_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Customer"/>
+	</field>
+	<field name="Location_Address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Location_Address"/>
+		<property name="com.jaspersoft.studio.field.label" value="Location_Address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Location"/>
+	</field>
+	<field name="Payment_Amount" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Payment_Amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="Payment_Amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Payment"/>
+	</field>
+	<field name="Booking_Date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="Booking_Date"/>
+		<property name="com.jaspersoft.studio.field.label" value="Booking_Date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Booking"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="83" splitType="Stretch">
+			<staticText>
+				<reportElement x="130" y="-4" width="342" height="41" uuid="35084063-4169-47ad-b963-99965fe617f3"/>
+				<textElement>
+					<font fontName="C059" size="18" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[K.D Aircon Industries (Pvt) Ltd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="179" y="19" width="184" height="40" uuid="8f7adb3d-fb47-457d-820a-050435c7e3e9"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[No:321/P1,Kalderam Maduwatte,Wekada,Panadura.                                          Tel:+94725038727]]></text>
+			</staticText>
+			<image>
+				<reportElement x="50" y="-4" width="66" height="50" uuid="dfd02ffb-b6bd-45d6-8a39-80530de08034"/>
+				<imageExpression><![CDATA["/home/vishmee/Pictures/Screenshots/Screenshot from 2024-05-07 23-33-44.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="158" y="17" width="231" height="1" uuid="fee803c1-0321-4420-bd0e-2cbc516a12dd"/>
+			</line>
+			<rectangle radius="10">
+				<reportElement x="6" y="52" width="545" height="1" uuid="29f105de-9d42-4638-a102-83db5e4066ea"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="-7" y="0" width="76" height="20" uuid="8b71c5a0-1d99-4ebe-9ca5-beb8942e74ae">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="93bd5287-d9a9-4c75-a1b3-575092108811"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="0" width="100" height="20" uuid="3a72abc2-6c96-40b9-b8ea-b1d4f80d7d31">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aed713fb-57bc-4027-bdc2-3e802f20efff"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="0" width="111" height="20" uuid="d0c8941f-015e-4a5e-aac2-202f3bdbf328">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="63509355-347f-45a7-a366-fcdad5f1a1fe"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="0" width="90" height="20" uuid="6cde04fb-e4b0-447f-aae9-2dc36c392006">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0e665167-eea2-4178-883e-e14618342caf"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="0" width="81" height="20" uuid="dafce041-a2fa-4804-8794-98169dee0990">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b5f0f66d-a7cb-415c-8c4f-238eb4bf0677"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="0" width="94" height="20" uuid="fcedbe9a-c051-409d-8af0-f83352464df6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="87c0ff6a-c775-4688-8672-41642993a376"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="-6" y="2" width="76" height="30" uuid="fd9b47b7-62e0-414f-aa77-7178079fecbb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="93bd5287-d9a9-4c75-a1b3-575092108811"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Booking_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="2" width="100" height="30" uuid="a76f5f1d-5b7e-43e4-b28b-3e1d201f3446">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aed713fb-57bc-4027-bdc2-3e802f20efff"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Employee_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="2" width="108" height="30" uuid="192995d7-e625-480c-a285-bd040f62811b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="63509355-347f-45a7-a366-fcdad5f1a1fe"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Customer_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="293" y="2" width="88" height="30" uuid="c1cdc84e-ce2a-42de-ad3a-a6ab5c3265ee">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0e665167-eea2-4178-883e-e14618342caf"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Location_Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="384" y="2" width="90" height="30" uuid="6a75144c-af8e-4084-815d-49945d9e5dec">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b5f0f66d-a7cb-415c-8c4f-238eb4bf0677"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Payment_Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="473" y="2" width="92" height="30" uuid="b83c070f-58de-47b4-84e1-d49c9ffc7166">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="87c0ff6a-c775-4688-8672-41642993a376"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Booking_Date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="89" splitType="Stretch">
+			<staticText>
+				<reportElement x="154" y="54" width="112" height="30" uuid="4fdb282d-ae9e-42e9-b512-ee5bb2b4442e"/>
+				<textElement>
+					<font fontName="C059" size="18" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Thank You!]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="267" y="54" width="148" height="30" uuid="c68fe0ce-a025-4695-aa60-0bfe0273a7d6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="63509355-347f-45a7-a366-fcdad5f1a1fe"/>
+				</reportElement>
+				<textElement>
+					<font fontName="C059" size="18" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Customer_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="124" y="10" width="123" height="33" uuid="f5bc6303-3e1f-4cdd-be43-877208f3e3cb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="93bd5287-d9a9-4c75-a1b3-575092108811"/>
+				</reportElement>
+				<textElement>
+					<font fontName="aakar" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Booking_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="10" width="83" height="33" uuid="945ef621-3cc2-46dd-a9e9-692abb7b9290">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="93bd5287-d9a9-4c75-a1b3-575092108811"/>
+				</reportElement>
+				<textElement>
+					<font fontName="aakar" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking_id :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="414" y="7" width="122" height="30" uuid="1d6913b8-4488-442a-a07f-e52f780e070f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b5f0f66d-a7cb-415c-8c4f-238eb4bf0677"/>
+				</reportElement>
+				<textElement>
+					<font fontName="aakar" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Payment_Amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="353" y="7" width="60" height="30" uuid="d8db9c52-544a-4929-8ef7-51194cf6fef9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b5f0f66d-a7cb-415c-8c4f-238eb4bf0677"/>
+				</reportElement>
+				<textElement>
+					<font fontName="aakar" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount :]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

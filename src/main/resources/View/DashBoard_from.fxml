@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="DashBoardAncorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1020.0" prefWidth="1920.0" style="-fx-background-color: white;" styleClass="backgroundColour4" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.Ijse.Controller.DashBoardController">
+   <stylesheets>
+      <URL value="@../css/Style.css" />
+      <URL value="@../css/Style1.css" />
+   </stylesheets>
+   <children>
+      <AnchorPane fx:id="O1" layoutX="1615.0" layoutY="777.0" prefHeight="218.0" prefWidth="290.0" style="-fx-background-color: Black;" styleClass="rounded-corner-panes2">
+         <children>
+            <Label fx:id="lblOc" layoutX="63.0" layoutY="59.0" prefHeight="38.0" prefWidth="188.0" text="Order Count" textFill="#ffe5e5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblOrderCount" layoutX="112.0" layoutY="112.0" prefHeight="50.0" prefWidth="61.0" textFill="#ffe5e5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="126.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icon/cart(2).png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="MenuAncorPane" layoutX="12.0" layoutY="80.0" prefHeight="913.0" prefWidth="269.0" style="-fx-background-color: Black;" styleClass="rounded-corner-panes2">
+         <children>
+            <Line fx:id="lblL1" endX="-24.0" layoutX="120.0" layoutY="799.0" startX="-105.33333587646484" stroke="WHITE" />
+            <Line fx:id="lblL2" endX="-24.0" layoutX="276.0" layoutY="800.0" startX="-105.33333587646484" stroke="WHITE" />
+            <ImageView fitHeight="218.0" fitWidth="113.0" layoutX="80.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icon/profile.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnCustomer" alignment="BOTTOM_LEFT" layoutX="30.0" layoutY="262.0" mnemonicParsing="false" onAction="#btnCustomerOnAction" opacity="0.86" prefHeight="44.0" prefWidth="215.0" style="-fx-background-color: #1e272e;" styleClass="rounded-corner-panes2" text="     Customer" textFill="#fffffffc">
+               <stylesheets>
+                  <URL value="@../css/Style1.css" />
+                  <URL value="@../css/Style1.css" />
+               </stylesheets>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btnLocation" alignment="BOTTOM_LEFT" layoutX="30.0" layoutY="320.0" mnemonicParsing="false" onAction="#btnLocationOnAction" opacity="0.86" prefHeight="44.0" prefWidth="215.0" style="-fx-background-color: #1e272e;" styleClass="rounded-corner-panes2" text="     Location" textFill="#fffffffc">
+               <stylesheets>
+                  <URL value="@../css/Style1.css" />
+                  <URL value="@../css/Style1.css" />
+               </stylesheets>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btnOrder" alignment="BOTTOM_LEFT" layoutX="30.0" layoutY="379.0" mnemonicParsing="false" onAction="#btnOrderOnAction" opacity="0.86" prefHeight="44.0" prefWidth="215.0" style="-fx-background-color: #1e272e;" styleClass="rounded-corner-panes2" text="     Order" textFill="#fffffffc">
+               <stylesheets>
+                  <URL value="@../css/Style1.css" />
+                  <URL value="@../css/Style1.css" />
+               </stylesheets>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btnBooking" alignment="BOTTOM_LEFT" layoutX="30.0" layoutY="439.0" mnemonicParsing="false" onAction="#btnBookingOnAction" opacity="0.86" prefHeight="44.0" prefWidth="215.0" style="-fx-background-color: #1e272e;" styleClass="rounded-corner-panes2" text="     Booking" textFill="#fffffffc">
+               <stylesheets>
+                  <URL value="@../css/Style1.css" />
+                  <URL value="@../css/Style1.css" />
+               </stylesheets>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btnShowRoom" alignment="BOTTOM_LEFT" layoutX="30.0" layoutY="500.0" mnemonicParsing="false" onAction="#btnShowRoomOnAction" opacity="0.86" prefHeight="44.0" prefWidth="215.0" style="-fx-background-color: #1e272e;" styleClass="rounded-corner-panes2" text="     ShowRoom" textFill="#fffffffc">
+               <stylesheets>
+                  <URL value="@../css/Style1.css" />
+                  <URL value="@../css/Style1.css" />
+               </stylesheets>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btnProduct" alignment="BOTTOM_LEFT" layoutX="30.0" layoutY="560.0" mnemonicParsing="false" onAction="#btnProductOnAction" opacity="0.86" prefHeight="44.0" prefWidth="215.0" style="-fx-background-color: #1e272e;" styleClass="rounded-corner-panes2" text="     Product" textFill="#fffffffc">
+               <stylesheets>
+                  <URL value="@../css/Style1.css" />
+                  <URL value="@../css/Style1.css" />
+               </stylesheets>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btnEmployye" alignment="BOTTOM_LEFT" layoutX="30.0" layoutY="623.0" mnemonicParsing="false" onAction="#btnEmployyeOnAction" opacity="0.86" prefHeight="44.0" prefWidth="215.0" style="-fx-background-color: #1e272e;" styleClass="rounded-corner-panes2" text="     Employee" textFill="#fffffffc">
+               <stylesheets>
+                  <URL value="@../css/Style1.css" />
+                  <URL value="@../css/Style1.css" />
+               </stylesheets>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btnRegister" alignment="BOTTOM_LEFT" layoutX="30.0" layoutY="683.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" opacity="0.86" prefHeight="44.0" prefWidth="215.0" style="-fx-background-color: #1e272e;" styleClass="rounded-corner-panes2" text="     Register " textFill="#fffffffc">
+               <stylesheets>
+                  <URL value="@../css/Style1.css" />
+                  <URL value="@../css/Style1.css" />
+               </stylesheets>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Label fx:id="lblClick" layoutX="108.0" layoutY="786.0" prefHeight="26.0" prefWidth="59.0" text="Click" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLogOut" alignment="BASELINE_LEFT" layoutX="33.0" layoutY="840.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" opacity="0.86" prefHeight="44.0" prefWidth="215.0" style="-fx-background-color: #1e272e;" styleClass="rounded-corner-panes2" text="     Log Out" textFill="#fffffffc">
+               <stylesheets>
+                  <URL value="@../css/Style1.css" />
+                  <URL value="@../css/Style1.css" />
+               </stylesheets>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Label fx:id="lblUser" layoutX="95.0" layoutY="182.0" prefHeight="50.0" prefWidth="91.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblGreeting" layoutX="46.0" layoutY="143.0" prefHeight="39.0" prefWidth="195.0" textFill="#f2f2f2">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+      <AnchorPane fx:id="TitleBar" layoutX="15.0" layoutY="8.0" prefHeight="58.0" prefWidth="1891.0" style="-fx-background-color: Black;" styleClass="rounded-corner-panes2">
+         <children>
+            <Label fx:id="lblDate" layoutX="1274.0" layoutY="11.0" prefHeight="38.0" prefWidth="188.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="MenuBtn" layoutX="10.0" layoutY="5.0" mnemonicParsing="false" onAction="#MenuBtnOnAction" prefHeight="46.0" prefWidth="141.0" style="-fx-background-color: transparent;" styleClass="rounded-corner-panes3" stylesheets="@../css/Style1.css" text="Menu" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+      <AnchorPane fx:id="U1" layoutX="1616.0" layoutY="86.0" prefHeight="229.0" prefWidth="289.0" style="-fx-background-color: Black;" styleClass="rounded-corner-panes2">
+         <children>
+            <Label fx:id="lblUc" layoutX="61.0" layoutY="54.0" prefHeight="38.0" prefWidth="172.0" text="User Count" textFill="#ffe5e5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblUserCount" layoutX="105.0" layoutY="113.0" prefHeight="50.0" prefWidth="61.0" textFill="#ffe5e5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="39.0" fitWidth="46.0" layoutX="120.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icon/user.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="E1" layoutX="1616.0" layoutY="320.0" prefHeight="218.0" prefWidth="289.0" style="-fx-background-color: Black;" styleClass="rounded-corner-panes2">
+         <children>
+            <Label fx:id="LblEc" layoutX="38.0" layoutY="55.0" prefHeight="38.0" prefWidth="214.0" text="EmployeeCount" textFill="#ffe5e5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblEmployeeCount" layoutX="107.0" layoutY="117.0" prefHeight="50.0" prefWidth="61.0" textFill="#ffe5e5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="47.0" fitWidth="67.0" layoutX="112.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icon/employees.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="B1" layoutX="1616.0" layoutY="542.0" prefHeight="230.0" prefWidth="289.0" style="-fx-background-color: Black;" styleClass="rounded-corner-panes2">
+         <children>
+            <Label fx:id="LblBc" layoutX="43.0" layoutY="59.0" prefHeight="38.0" prefWidth="201.0" text="Booking Count" textFill="#ffe5e5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblProductCount" layoutX="112.0" layoutY="120.0" prefHeight="50.0" prefWidth="61.0" textFill="#ffe5e5">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="39.0" fitWidth="46.0" layoutX="117.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icon/car-dealer.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="SpecialDataPane" layoutX="323.0" layoutY="88.0" prefHeight="906.0" prefWidth="1250.0">
+         <children>
+            <AnchorPane layoutX="4.0" layoutY="478.0" prefHeight="428.0" prefWidth="1244.0">
+               <styleClass>
+                  <String fx:value="backgroundColour4" />
+                  <String fx:value="rounded-corner-panes3" />
+               </styleClass>
+               <children>
+                  <TableView fx:id="ColBookTel" layoutX="18.0" layoutY="46.0" prefHeight="341.0" prefWidth="1173.0" style="-fx-background-color: transparent;" styleClass="rounded-corner-panes4">
+                     <columns>
+                        <TableColumn fx:id="colBookID" prefWidth="73.0" text="B ID" />
+                        <TableColumn fx:id="colLocID" minWidth="0.0" prefWidth="69.0" text="L ID" />
+                        <TableColumn fx:id="colEmpID" minWidth="0.0" prefWidth="95.0" text="E ID" />
+                        <TableColumn fx:id="colPayID" minWidth="0.33331298828125" prefWidth="120.0" text="P ID" />
+                        <TableColumn fx:id="colPlaceDate" prefWidth="155.0" text="Place Date" />
+                        <TableColumn fx:id="colDescription" prefWidth="395.0" text="Description" />
+                        <TableColumn fx:id="colBookDate" minWidth="0.0" prefWidth="264.0" text="Date" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="301.0" layoutY="4.0" prefHeight="29.0" prefWidth="342.0" text="Booking Dates" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="666.0" layoutY="-4.0" prefHeight="240.0" prefWidth="582.0">
+               <styleClass>
+                  <String fx:value="backgroundColour4" />
+                  <String fx:value="rounded-corner-panes3" />
+               </styleClass>
+               <children>
+                  <VBox layoutX="63.0" layoutY="78.0" prefHeight="143.0" prefWidth="119.0" style="-fx-background-color: Transparent;" styleClass="rounded-corner-panes3">
+                     <children>
+                        <Label prefHeight="44.0" prefWidth="120.0" text=" Name    " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label prefHeight="44.0" prefWidth="120.0" text=" Contact " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label prefHeight="44.0" prefWidth="115.0" text=" Email     " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="187.0" layoutY="78.0" prefHeight="143.0" prefWidth="344.0" style="-fx-background-color: Transparent;" styleClass="rounded-corner-panes3">
+                     <children>
+                        <Label fx:id="lblEName" prefHeight="44.0" prefWidth="408.0" text="   " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label fx:id="lblEContatc" prefHeight="44.0" prefWidth="416.0" text="   " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label fx:id="lblEmail" prefHeight="44.0" prefWidth="414.0" text="     " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="667.0" layoutY="244.0" prefHeight="227.0" prefWidth="582.0">
+               <styleClass>
+                  <String fx:value="backgroundColour4" />
+                  <String fx:value="rounded-corner-panes3" />
+               </styleClass>
+               <children>
+                  <TextField fx:id="txtSearch" layoutX="106.0" layoutY="-235.0" onKeyReleased="#txtSearchKeyReleased" prefHeight="44.0" prefWidth="437.0" promptText="Search Employee" styleClass="rounded-corner-panes2" stylesheets="@../css/Style1.css">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect></TextField>
+                  <ImageView fitHeight="52.0" fitWidth="46.0" layoutX="41.0" layoutY="-239.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icon/employees.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="SearchBtn" layoutX="354.0" layoutY="-232.0" mnemonicParsing="false" onAction="#SearchBtnOnAction" prefHeight="40.0" prefWidth="195.0" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="499.0" layoutY="-225.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icon/search.png" />
+                     </image>
+                  </ImageView>
+                  <VBox layoutX="178.0" layoutY="68.0" prefHeight="143.0" prefWidth="362.0" style="-fx-background-color: Transparent;" styleClass="rounded-corner-panes3">
+                     <children>
+                        <Label fx:id="lblBookingDate" prefHeight="44.0" prefWidth="408.0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label fx:id="LblBookingCustomerName" prefHeight="44.0" prefWidth="416.0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label fx:id="LblLocationBooking" prefHeight="44.0" prefWidth="414.0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Label layoutX="117.0" layoutY="17.0" prefHeight="38.0" prefWidth="325.0" text="Today Booking Details" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="53.0" layoutX="41.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icon/online-booking.png" />
+                     </image>
+                  </ImageView>
+                  <VBox layoutX="64.0" layoutY="68.0" prefHeight="143.0" prefWidth="121.0" style="-fx-background-color: Transparent;" styleClass="rounded-corner-panes3">
+                     <children>
+                        <Label prefHeight="44.0" prefWidth="120.0" text=" Date       " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label prefHeight="44.0" prefWidth="125.0" text=" Name      " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label prefHeight="44.0" prefWidth="151.0" text=" Location " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="4.0" layoutY="-5.0" prefHeight="472.0" prefWidth="655.0">
+               <styleClass>
+                  <String fx:value="backgroundColour4" />
+                  <String fx:value="rounded-corner-panes3" />
+               </styleClass>
+               <children>
+                  <PieChart fx:id="PieChart" layoutX="20.0" layoutY="56.0" prefHeight="306.0" prefWidth="300.0" />
+                  <Label layoutX="298.0" layoutY="15.0" prefHeight="38.0" prefWidth="113.0" text="Report" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="53.0" layoutX="242.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icon/graph.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <Label fx:id="lblTime" layoutX="1490.0" layoutY="20.0" prefHeight="38.0" prefWidth="221.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Group layoutX="5.0" layoutY="10.0">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="47.0" layoutX="25.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icon/icons8-menu-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Label fx:id="lblTitle" layoutX="597.0" layoutY="2.0" prefHeight="67.0" prefWidth="648.0" styleClass="font" stylesheets="@../css/Fonts.css" text="K.D Aircon Industries (Pvt) Ltd" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Group layoutX="1400.0" layoutY="16.0">
+         <children>
+            <Button fx:id="ModeBtn" layoutX="343.0" layoutY="-4.0" mnemonicParsing="false" onAction="#ModeBtnOnAction" prefHeight="52.0" prefWidth="151.0" style="-fx-background-color: transparent;" styleClass="rounded-corner-panes3" stylesheets="@../css/Style1.css" text="    Mode" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="351.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icon/day-mode.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Group layoutX="1039.0" layoutY="1253.0" />
+   </children>
+</AnchorPane>

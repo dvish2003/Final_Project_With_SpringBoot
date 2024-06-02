@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="906.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.Ijse.Controller.ProductController">
+   <children>
+      <AnchorPane layoutX="420.0" layoutY="68.0" prefHeight="834.0" prefWidth="825.0">
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/Style1.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="backgroundColour4" />
+            <String fx:value="rounded-corner-panes3" />
+         </styleClass>
+         <children>
+            <TableView fx:id="colPrTel" layoutX="23.0" layoutY="14.0" prefHeight="357.0" prefWidth="782.0">
+              <columns>
+                <TableColumn fx:id="colPrID" prefWidth="85.0" text="Product ID" />
+                  <TableColumn fx:id="colPrDesc" prefWidth="335.0" text="Description" />
+                  <TableColumn fx:id="colQtyOnHand" prefWidth="145.0" text="QtyOnHand" />
+                  <TableColumn fx:id="colPrUnitPrice" prefWidth="211.0" text="Unit Price" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="3.0" layoutY="69.0" prefHeight="834.0" prefWidth="408.0">
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/Style1.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="backgroundColour4" />
+            <String fx:value="rounded-corner-panes3" />
+         </styleClass>
+      </AnchorPane>
+      <AnchorPane layoutX="3.0" layoutY="-6.0" prefHeight="68.0" prefWidth="1244.0">
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/Style1.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="backgroundColour4" />
+            <String fx:value="rounded-corner-panes3" />
+         </styleClass>
+      </AnchorPane>
+      <Button fx:id="btnPrSave" layoutX="131.0" layoutY="665.0" mnemonicParsing="false" onAction="#btnPrSaveOnAction" opacity="0.65" prefHeight="40.0" prefWidth="147.0" style="-fx-background-color: #1e272e;" styleClass="rounded-corner-panes1" stylesheets="@../css/Style1.css" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnPrUpdate" layoutX="131.0" layoutY="723.0" mnemonicParsing="false" onAction="#btnPrUpdateOnAction" opacity="0.65" prefHeight="40.0" prefWidth="147.0" style="-fx-background-color: #1e272e;" styleClass="rounded-corner-panes1" stylesheets="@../css/Style1.css" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnPrDelete" layoutX="131.0" layoutY="782.0" mnemonicParsing="false" onAction="#btnPrDeleteOnAction" opacity="0.65" prefHeight="40.0" prefWidth="147.0" style="-fx-background-color: #1e272e;" styleClass="rounded-corner-panes1" stylesheets="@../css/Style1.css" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnPrClean" layoutX="132.0" layoutY="844.0" mnemonicParsing="false" onAction="#btnPrCleanOnAction" opacity="0.65" prefHeight="40.0" prefWidth="147.0" style="-fx-background-color: #1e272e;" styleClass="rounded-corner-panes1" stylesheets="@../css/Style1.css" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnHome" layoutX="11.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnHomeOnAction" opacity="0.65" prefHeight="40.0" prefWidth="183.0" style="-fx-background-color: #1e272e;" styleClass="rounded-corner-panes1" stylesheets="@../css/Style1.css" text="Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Label layoutX="529.0" layoutY="-6.0" prefHeight="59.0" prefWidth="304.0" text="Product" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="44.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="23.0" layoutY="151.0" prefHeight="40.0" prefWidth="187.0" text="Product  ID -&gt;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="23.0" layoutY="437.0" prefHeight="40.0" prefWidth="164.0" text="Description " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TextField fx:id="txtPrDesc" layoutX="51.0" layoutY="475.0" onKeyReleased="#DescK" prefHeight="42.0" prefWidth="340.0" promptText="Enter Description" style="-fx-background-color: transparent; -fx-border-color: White; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: WHITE;">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <Label layoutX="22.0" layoutY="548.0" prefHeight="26.0" prefWidth="154.0" text="Unit Price   " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TextField fx:id="txtPrUnitPrice" layoutX="50.0" layoutY="578.0" onKeyReleased="#UnitK" prefHeight="42.0" prefWidth="340.0" promptText="Enter Unit Price" style="-fx-background-color: transparent; -fx-border-color: White; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: WHITE;">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <ImageView fitHeight="59.0" fitWidth="59.0" layoutX="338.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icon/add-item.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="24.0" layoutY="321.0" prefHeight="26.0" prefWidth="164.0" text="QtyOnHand " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TextField fx:id="txtQty" layoutX="51.0" layoutY="353.0" onKeyReleased="#QtyK" prefHeight="42.0" prefWidth="340.0" promptText="Enter Qty" style="-fx-background-color: transparent; -fx-border-color: White; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: WHITE;">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <ComboBox fx:id="cmbShowRoom" layoutX="209.0" layoutY="237.0" onAction="#cmbShowRoomOnAction" prefHeight="33.0" prefWidth="147.0" promptText="Show Room ID" style="-fx-border-color: White; -fx-background-color: Transparent; -fx-border-width: 0px 0px 2px 0px;">
+         <effect>
+            <DropShadow />
+         </effect></ComboBox>
+      <TableView fx:id="colPrJoinTel" layoutX="444.0" layoutY="494.0" prefHeight="395.0" prefWidth="782.0">
+         <columns>
+            <TableColumn fx:id="coljoinShowRoom" prefWidth="123.0" text="Show Room ID" />
+            <TableColumn fx:id="coljoinPrID" prefWidth="91.0" text="Product ID" />
+            <TableColumn fx:id="coljoinPrDesc" prefWidth="286.0" text="Description" />
+            <TableColumn fx:id="coljoinQtyOnHand" prefWidth="92.0" text="QtyOnHand" />
+            <TableColumn fx:id="coljoinPrUnitPrice" prefWidth="189.0" text="Unit Price" />
+         </columns>
+      </TableView>
+      <Label layoutX="710.0" layoutY="454.0" prefHeight="26.0" prefWidth="243.0" text="Show Room Details" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="23.0" layoutY="241.0" prefHeight="26.0" prefWidth="187.0" text="ShowRoom ID " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label fx:id="lblProductID" layoutX="209.0" layoutY="152.0" prefHeight="40.0" prefWidth="187.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="104.0" layoutY="82.0" prefHeight="40.0" prefWidth="208.0" text="Product  Details" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

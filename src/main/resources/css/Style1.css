@@ -1,0 +1,32 @@
+.rounded-corner-panes {
+    -fx-background-radius: 10px;
+}
+
+.rounded-corner-panes1 {
+    -fx-background-radius: 12px;
+}
+
+.rounded-corner-panes2{
+    -fx-background-radius: 15px;
+}
+
+.rounded-corner-panes3{
+    -fx-background-radius: 16px;
+}
+
+.rounded-corner-panes4{
+    -fx-background-radius: 18px;
+}
+
+.rounded-corner-panes4{
+    -fx-background-radius: 20px;
+}
+
+.rounded-corner-panes5{
+    -fx-background-radius: 25px;
+}
+
+.rounded-corner-panes6{
+    -fx-background-radius: 170px;
+}
+
